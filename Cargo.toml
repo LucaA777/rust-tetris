@@ -1,6 +1,11 @@
-[package]
-name = "rust-tetris"
+[workspace]
+members = ["crates/tetris-core", "crates/tetris-tui"]
+resolver = "3"
+
+[workspace.package]
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
 
-[dependencies]
+[workspace.lints.clippy]
+pedantic = { level = "warn", priority = -1 }
